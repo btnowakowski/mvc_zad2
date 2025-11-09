@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2>Lista filmów</h2>
+    {% if movies %}
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tytuł</th>
+            <th>Rok</th>
+            <th>Gatunek</th>
+            <th>Akcje</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for movie in movies %}
+        <tr>
+            <td>{{ movie.id }}</td>
+            <td>{{ movie.title }}</td>
+            <td>{{ movie.year }}</td>
+            <td>{{ movie.genre }}</td>
+            <td>
+                <div class="actions">
+                    <a class="btn secondary" href="/?view=edit&id={{ movie.id }}">Edytuj</a>
+                    <form method="post" action="/delete/{{ movie.id }}" onsubmit="return confirm('Usunąć ten film?');">
+                        <button class="btn danger" type="submit">Usuń</button>
+                    </form>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>Brak filmów. Dodaj coś sensownego.</p>
+    {% endif %}
+</div>
+{% endblock %}

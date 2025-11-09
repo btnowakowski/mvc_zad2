@@ -1,0 +1,6 @@
+.pytest_cache
+.vscode
+/source/__pycache__
+__pycache__
+movies.db
+venv/

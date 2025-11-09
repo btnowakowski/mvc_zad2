@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2>Edytuj film #{{ movie.id }}</h2>
+    <form method="post" action="/edit/{{ movie.id }}">
+        <div>
+            <label for="title">Tytuł</label>
+            <input id="title" name="title" value="{{ movie.title }}" required>
+        </div>
+        <div>
+            <label for="year">Rok produkcji</label>
+            <input id="year" name="year" type="number" min="1888" max="2100" value="{{ movie.year }}" required>
+        </div>
+        <div>
+            <label for="genre">Gatunek</label>
+            <input id="genre" name="genre" value="{{ movie.genre }}" required>
+        </div>
+        <div>
+            <button class="btn" type="submit">Zapisz</button>
+            <a class="btn secondary" href="/?view=list">Anuluj</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

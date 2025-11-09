@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2>Dodaj film</h2>
+    <form method="post" action="/add">
+        <div>
+            <label for="title">Tytuł</label>
+            <input id="title" name="title" required>
+        </div>
+        <div>
+            <label for="year">Rok produkcji</label>
+            <input id="year" name="year" type="number" min="1888" max="2100" required>
+        </div>
+        <div>
+            <label for="genre">Gatunek</label>
+            <select id="genre" name="genre" required>
+                <option value="">-- wybierz --</option>
+                <option>Komedia</option>
+                <option>Akcja</option>
+                <option>Dramat</option>
+                <option>Thriller</option>
+                <option>Science Fiction</option>
+            </select>
+        </div>
+        <div>
+            <button class="btn" type="submit">Zapisz</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
