@@ -8,7 +8,7 @@ git clone https://github.com/btnowakowski/mvc_zad2/
 # 2. Przejdź do folderu z repozytorium
 cd mvc_zad2
 # 3. Aktywuj środowisko
-./venv/source/activate lub source /venv/bin/activate
+./venv/Scripts/activate lub source /venv/bin/activate
 # 4. Zasintaluj wymagane zalezności
 pip install -r requirements.txt
 # 5. Przejdź do folderu z kodem
