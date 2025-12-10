@@ -1,12 +1,18 @@
 # mvc_zad2
 
 
-### uruchamianie:
+## Uruchamianie aplikacji
 ```bash
-- git clone https://github.com/btnowakowski/mvc_zad2/
-- cd mvc_zad2
-- ./venv/source/activate lub source /venv/bin/activate
-- pip install -r requirements.txt
-- cd source/mvc-app-movies   
-- uvicorn main:app --reload
+# 1. Sklonuj repozytorium
+git clone https://github.com/btnowakowski/mvc_zad2/
+# 2. Przejdź do folderu z repozytorium
+cd mvc_zad2
+# 3. Aktywuj środowisko
+./venv/source/activate lub source /venv/bin/activate
+# 4. Zasintaluj wymagane zalezności
+pip install -r requirements.txt
+# 5. Przejdź do folderu z kodem
+cd source/mvc-app-movies
+# 6. Uruchom serwer uvicorn
+uvicorn main:app --reload
 ```
